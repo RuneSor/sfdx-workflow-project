@@ -1,0 +1,37 @@
+.DS_Store
+.sfdx
+.project
+.salesforce
+.settings
+node_modules
+.idea
+
+# VSCode settings
+.vscode
+
+# local LWC dev server settings
+.localdevserver
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Eslint cache
+.eslintcache
+
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.vscode/settings.json
+
+# temp disable source folders
+force-app-from-sourceorg

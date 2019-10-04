@@ -1,0 +1,20 @@
+{
+  "status": 0,
+  "result": {
+    "password": "",
+    "username": "",
+    "devHubId": "",
+    "id": "",
+    "createdBy": "",
+    "createdDate": "",
+    "expirationDate": "",
+    "status": "",
+    "edition": "",
+    "orgName": "",
+    "accessToken": "",
+    "instanceUrl": "",
+    "clientId": "PlatformCLI",
+    "sfdxAuthUrl": "",
+    "alias": ""
+  }
+}

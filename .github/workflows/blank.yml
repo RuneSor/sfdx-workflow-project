@@ -1,0 +1,48 @@
+name: Build_n_Test
+
+on:
+    push:
+        branches: 
+            - dev
+            - feature/*
+
+jobs:
+    BuildAndTest:
+        runs-on: ubuntu-latest
+        env:
+            SF_USERNAME: ${{ secrets.SF_USERNAME}}
+            SF_CONSUMER_KEY: ${{ secrets.SF_CONSUMER_KEY}}
+            DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY}}
+            DECRYPTION_IV: ${{ secrets.DECRYPTION_IV}}
+            HUBORG_ALIAS: hubOrgAlias
+            SF_SO_ALIAS: scratchOrgAlias
+            SF_TESTLEVEL: RunLocalTests
+            CLIURL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+        container:
+            image: docker://salesforce/salesforcedx
+         
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v1
+
+        - name: Dectypt server.key
+          run: openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+          
+        - name: Authorize HubOrg
+          run: sfdx force:auth:jwt:grant -i $SF_CONSUMER_KEY -f assets/server.key -u $SF_USERNAME -d -a $HUBORG_ALIAS
+          continue-on-error: false
+        - name: Create Scratch Org
+          run: sfdx force:org:create -v $HUBORG_ALIAS -s -f config/project-scratch-def.json -a $SF_SO_ALIAS
+          continue-on-error: false        
+        - name: Push Source To Scratch Org
+          run: sfdx force:source:push -f -u $SF_SO_ALIAS
+          continue-on-error: false
+        - name: Run Tests
+          run: sfdx force:apex:test:run -c -r human -d
+          continue-on-error: true
+        - name: Remove key file
+          run: rm assets/server.key
+          continue-on-error: true
+        - name: Detele Scratch Org
+          run: sfdx force:org:delete -u $SF_SO_ALIAS -p
+          if: always()

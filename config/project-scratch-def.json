@@ -1,0 +1,15 @@
+{
+  "country": "US",
+  "orgName": "RuneSor Company",
+  "edition": "Developer",
+  "features": [],
+  "hasSampleData": false,
+  "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true,
+      "chatterEnabled": true,
+      "notesReservedPref01": true
+    }
+  },
+  "adminEmail": "rune.sorensen@fluidogroup.com"
+}
