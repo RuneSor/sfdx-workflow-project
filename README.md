@@ -1,6 +1,6 @@
 Build Status:  
 ![](https://github.com/runesor/sfdx-workflow-project/workflows/Build_n_Test/badge.svg)
-![](.github/workflows/Nightly/badge.svg)
+![](/.github/workflows/Nightly/badge.svg)
 
 
 # sfdx-project-template  
