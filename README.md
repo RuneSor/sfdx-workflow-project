@@ -1,12 +1,12 @@
 Build Status:  
-![](https://github.com/runesor/sfdx-project-template/workflows/Build_n_Test/badge.svg)
-![](https://github.com/runesor/sfdx-project-template/workflows/Nightly/badge.svg)
+![](https://github.com/runesor/sfdx-workflow-project/workflows/Build_n_Test/badge.svg)
+![](https://github.com/runesor/sfdx-workflow-project/workflows/Nightly/badge.svg)
 
 
 # sfdx-project-template  
 Template for new projects, including tools i find useful in my day-to-day tasks using SFDX
 
-## Getting Started
+  ## Getting Started
 1) [Fork](http://help.github.com/fork-a-repo/) this repo to your GitHub account using the fork link at the top of the page.
 
 2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-project-template.git`
