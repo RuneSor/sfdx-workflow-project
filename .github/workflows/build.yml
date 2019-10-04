@@ -38,7 +38,7 @@ jobs:
           run: sfdx force:source:push -f -u $SF_SO_ALIAS
           continue-on-error: false
         - name: Run Tests
-          run: sfdx force:apex:test:run -c -r human -d
+          run: sfdx force:apex:test:run -c -r json -d assets/testlogs
           continue-on-error: true
         - name: Remove key file
           run: rm assets/server.key
