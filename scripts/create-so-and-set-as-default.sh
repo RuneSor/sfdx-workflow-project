@@ -3,7 +3,7 @@
 
 start=$(date +%s)
 
-DURATION=30
+DURATION=7
 
 if [ "$#" -eq 1 ]; then
   DURATION=$1

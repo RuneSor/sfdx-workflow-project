@@ -7,9 +7,9 @@ Build Status:
 Template for new projects, including tools (mostly shell/bash scripts) i find useful in my day-to-day tasks using SFDX. This repo will be updated with usefulness from time to time. 
 
   ## Getting Started
-1) [Fork](http://help.github.com/fork-a-repo/) this repo to your GitHub account using the fork link at the top of the page.
+1) Click the green 'Use this template' button, for setting up your own repository from this template.
 
-2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-project-template.git`
+2) Clone your repo locally: `git clone https://github.com/<git_username>/<git_repo_name>.git`
 
 3) Make sure that you have Salesforce CLI installed. Run `sfdx force --help` and confirm you see the command output. If you don't have it installed, download and install it from [here](https://developer.salesforce.com/tools/sfdxcli).
 4) Setup a JWT-based auth flow for the target orgs that you want to deploy to. This step creates a `server.key` file that is used in subsequent steps.
