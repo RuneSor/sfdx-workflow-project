@@ -6,6 +6,13 @@ Build Status:
 # sfdx-project-template  
 Template for new projects, including tools (mostly shell/bash scripts) i find useful in my day-to-day tasks using SFDX. This repo will be updated with usefulness from time to time. 
 
+  ## Dependency
+Some of the scripts may depend on functionality installed. I will try to list here the needs.
+
+ - jq - https://stedolan.github.io/jq/download/
+  
+***
+
   ## Getting Started
 1) Click the green 'Use this template' button, for setting up your own repository from this template.
 
@@ -47,7 +54,8 @@ openssl enc -nosalt -aes-256-cbc -in assets/server.key -out assets/server.key.en
 
 9) Store the `key` and `iv` values used above in Workflow Secrets environment variables named `DECRYPTION_KEY` and `DECRYPTION_IV`, respectively. When finished setting the Secrets variables it should look something like the image below.
 
-![alt text](assets/secrets_view.png)
+![alt text](assets/secrets_view.png) NB: After you have saved the variables they can not be viewed again - so store them safely somewhere else if you need them.
+
 
 10) Update the contents of `sfdx-project.json` and `project-scratch-def.json` if needed and save.
 

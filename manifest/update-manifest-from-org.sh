@@ -157,5 +157,16 @@ main() {
 
    generatePackageXML ${apiVersion} > ${outputFile}
 }
+# check for needed dependencies
+command -v jq >/dev/null 2>&1 || { 
+    echo >&2 "This script require jq but it's not installed.";
+    echo 
+    echo "Go here to get it: https://stedolan.github.io/jq/download/ (Its super useful for loads of stuff so you gonna want it anyways)."; 
+    echo 
+    echo "Aborting.."; 
+    echo 
+    exit 1; 
+}
+
 
 main "$@"
