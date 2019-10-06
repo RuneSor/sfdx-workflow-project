@@ -29,11 +29,13 @@ CustomHelpMenuSection
 CustomPageWebLink
 CustomPermission
 CustomSite
+Dashboard
 DataCategoryGroup
 DelegateGroup
 DuplicateRule
 EclairGeoData
 EmailServicesFunction
+EmailTemplate
 EmbeddedServiceBranding
 EmbeddedServiceConfig
 EmbeddedServiceLiveAgent
@@ -85,6 +87,7 @@ ProfilePasswordPolicy
 ProfileSessionSetting
 RecommendationStrategy
 RecordActionDeployment
+Report
 SamlSsoConfig
 Scontrol
 ServiceChannel

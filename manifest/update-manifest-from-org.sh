@@ -1,7 +1,7 @@
 #!/bin/sh
 # Rune Sorensen - rune.sorensen@fluidogroup.com
 
-# These support * notation
+# These support * notation, so using that to speed up package.xml creation
 MetadataAll="AccountRelationshipShareRule,ActionLinkGroupTemplate,ApexClass,ApexComponent,
 ApexPage,ApexTrigger,AppMenu,ApprovalProcess,ArticleType,AssignmentRules,Audience,AuthProvider,
 AuraDefinitionBundle,AutoResponseRules,Bot,BrandingSet,CallCenter,Certificate,CleanDataService,
@@ -136,7 +136,26 @@ main() {
     local apiVersion=${1:-'46.0'}
     local outputFile=${2:-'package.xml'}
     local aliasOrg=${3:-'devHubAlias'}
-    local restrictfilename=${4:-'restrictedmetadata.txt'} # list of metadata we NOT want listed in package.xml
-    generatePackageXML ${apiVersion} > ${outputFile}
+    local restrictfilename=${4:-'restrictedmetadata.txt'} # list of metadata we do NOT want listed in package.xml
+
+    if [ $# -eq 0 ] ; then 
+        echo
+        echo "Usage: 
+        $0 [Api version] [package filename] [target org sfdx alias] [restricted md filename]"
+        echo
+        echo "Example: 
+        $0 45.0 package_new.xml targetOrgAlias customRestrictedMetadata.txt"
+        echo
+        echo "When not passing parameters, we use default variables: (update this script with your own default settings)"
+        echo
+        echo "Api ver.:    ${apiVersion}"
+        echo "Output File: ${outputFile}"
+        echo "Org Alias:   ${aliasOrg}"
+        echo "Restr.file: ${restrictfilename}"
+        echo
+    fi
+
+   generatePackageXML ${apiVersion} > ${outputFile}
 }
+
 main "$@"
