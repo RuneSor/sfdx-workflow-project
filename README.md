@@ -4,7 +4,7 @@ Build Status:
 
 
 # sfdx-project-template  
-Template for new projects, including tools i find useful in my day-to-day tasks using SFDX
+Template for new projects, including tools (mostly shell/bash scripts) i find useful in my day-to-day tasks using SFDX. This repo will be updated with usefulness from time to time. 
 
   ## Getting Started
 1) [Fork](http://help.github.com/fork-a-repo/) this repo to your GitHub account using the fork link at the top of the page.
@@ -51,13 +51,13 @@ openssl enc -nosalt -aes-256-cbc -in assets/server.key -out assets/server.key.en
 
 10) Update the contents of `sfdx-project.json` and `project-scratch-def.json` if needed and save.
 
-14) Commit the updated `sfdx-project.json`,`project-scratch-def.json`, and `server.key.enc` files.
+14) Commit the changes to your master branch, then create a new branch named 'dev'.
 
 Now you're ready to Set up Actions (se image). 
 
 ![alt text](assets/set_up_actions.png)
 
-Then, when you commit and push a change, your change kicks off a Workflow build.
+Then, when you commit and push a change to the 'dev' branch, your change kicks off a Workflow build which tests the changes. More tests will be added.
 
 Enjoy!
 
