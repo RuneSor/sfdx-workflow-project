@@ -61,3 +61,13 @@ Then, when you commit and push a change to the 'dev' branch, your change kicks o
 
 Enjoy!
 
+# Contributing
+
+If you have something clever or useful you feel like sharing (i.e. a shell script that automates some process, or generic test functions etc), please follow this:
+
+1. Fork this project.
+2. Create your feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add NewFeature'`).
+4. Push to your feature branch (`git push origin feature/NewFeature`).
+5. Open a pull request to the `dev` branch.
+
