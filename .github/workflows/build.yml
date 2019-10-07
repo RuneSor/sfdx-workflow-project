@@ -40,6 +40,11 @@ jobs:
         - name: Run Tests
           run: sfdx force:apex:test:run -c -r json -d assets/testlogs
           continue-on-error: true
+        - name: Uploading testresult
+          uses: actions/upload-artifact@v1
+          with:
+            name: test-results
+            path: assets/testlogs
         - name: Remove key file
           run: rm assets/server.key
           continue-on-error: true

@@ -34,8 +34,16 @@ jobs:
           run: sfdx force:source:push -f -u $SF_SO_ALIAS
           continue-on-error: false
         - name: Run Tests
-          run: sfdx force:apex:test:run -c -r human -d
+          run: sfdx force:apex:test:run -c -r json -d assets/testlogs
           continue-on-error: true
-        - name: Clean Up
+        - name: Uploading testresult
+          uses: actions/upload-artifact@v1
+          with:
+            name: test-results
+            path: assets/testlogs
+        - name: Remove key file
+          run: rm assets/server.key
+          continue-on-error: true
+        - name: Detele Scratch Org
           run: sfdx force:org:delete -u $SF_SO_ALIAS -p
           if: always()
