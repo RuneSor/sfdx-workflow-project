@@ -5,11 +5,15 @@
   "features": [],
   "hasSampleData": false,
   "settings": {
-    "orgPreferenceSettings": {
-      "s1DesktopEnabled": true,
-      "chatterEnabled": true,
-      "notesReservedPref01": true
-    }
+      "lightningExperienceSettings": {
+          "enableS1DesktopEnabled": true
+      },
+      "chatterSettings": {
+          "enableChatter": true
+      },
+      "enhancedNotesSettings": {
+          "enableEnhancedNotes": true
+      }
   },
   "adminEmail": "rune.sorensen@fluidogroup.com"
 }
