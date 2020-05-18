@@ -7,7 +7,7 @@ node_modules
 .idea
 
 # VSCode settings
-.vscode
+# .vscode
 
 # local LWC dev server settings
 .localdevserver
@@ -31,7 +31,6 @@ Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
-.vscode/settings.json
 
 # temp disable source folders
 force-app-from-sourceorg
