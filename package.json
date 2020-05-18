@@ -1,0 +1,23 @@
+{
+  "name": "sfdx-workflow-project",
+  "version": "1.0.0",
+  "description": "Build Status:   ![](https://github.com/runesor/sfdx-workflow-project/workflows/Build_n_Test/badge.svg) ![](https://github.com/runesor/sfdx-workflow-project/workflows/Nightly/badge.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuneSor/sfdx-workflow-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuneSor/sfdx-workflow-project/issues"
+  },
+  "homepage": "https://github.com/RuneSor/sfdx-workflow-project#readme",
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "prettier-plugin-apex": "1.4.0"
+  }
+}
