@@ -15,7 +15,7 @@ public with sharing class DemoController {
     if (lastName != null) {
       // Query the object
       Contact theContact = [
-        SELECT ID
+        SELECT Id
         FROM Contact
         WHERE LastName = :lastName
         LIMIT 1
